@@ -1,0 +1,62 @@
+body {
+	font-family: Roboto;
+	font-weight: 300;
+	text-align: center;
+}
+h1 {
+	letter-spacing: 30px;
+}
+h2 {
+	letter-spacing: 16px;
+}
+h3 {
+	letter-spacing: 8px;
+}
+h4 {
+	letter-spacing: 4px;
+}
+h5 {
+	letter-spacing: 2px;
+}
+h6 {
+	letter-spacing: 0px;	
+}
+img {
+	border: 1px solid black;
+}
+#me {
+	height: 100px;
+	opacity: 0.5;
+	border-radius: 3px;
+	transition: 0.25s;
+}
+#cat {
+	height: 150px;
+	display: block;
+	border-radius: 150px;
+}
+#me:hover {
+	border-color: orange;
+	opacity: 0.8;
+}
+.content {
+	text-align: left;
+	padding-bottom: 40px;
+}
+a {
+	text-decoration: none;
+	color: green;
+}
+#email {
+	transition: 0.5s;
+}
+#meowtown {
+	transition: 1s;
+}
+a:hover {
+	color: orange;
+}
+#meowtown:hover {
+	letter-spacing: 10px;
+}
+
