@@ -5,10 +5,10 @@ html, body {
 	font-family: 'Roboto';
 	cursor: crosshair;
 }
-h1, h2, h3, h4, ul { 
+h1, h2, h3, h4, h5, ul { 
 	margin: 0; 
 	padding: 0; 
-	font-weight: 200; 
+	font-weight: 300; 
  }
  .container {
 	border: 1px solid black;
@@ -70,23 +70,36 @@ ul {
 	border-bottom-color: orange;
 	letter-spacing: 2px;
 }
-h1 {
-	font-size: 40px;
+h1 { /*page title*/
+	font-size: 42px;
 	letter-spacing: 8px;
 }
-h2 {
-	font-size: 24px;
+h2 { /*blog title*/
+	font-size: 30px;
 	font-weight: 300;
+	color: orange;
 }
-h3 {
+h3 { /*blog subtitles*/
+	font-size: 21px;
+	color: teal;
+}
+h4 { /*name*/
 	font-size: 18px;
 	letter-spacing: 5px;
 }
-h4 {
-	font-size: 16px;
+h5 { /*about button*/
+	font-size: 14px;
 }
 p {
 	font-size: 12px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: 0.5s;
+}
+a:hover {
+	color: orange;
 }
 @media(min-width: 1000px) {
 	#sidebar {
