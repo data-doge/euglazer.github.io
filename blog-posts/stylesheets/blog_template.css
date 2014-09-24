@@ -61,15 +61,6 @@ ul {
 	list-style-type: none;
 	padding: 0;
 }
-.link {
-	border-bottom: 1px solid black;
-	display: inline-block;
-	transition: 0.5s;
-}
-.link:hover {
-	border-bottom-color: orange;
-	letter-spacing: 2px;
-}
 h1 { /*page title*/
 	font-size: 42px;
 	letter-spacing: 8px;
