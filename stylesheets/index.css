@@ -1,96 +1,75 @@
-html, body { 
-	margin: 0px; 
-	padding: 5px; 
-	border: 0px; 
-	font-family: 'Roboto';
+body {
 	cursor: crosshair;
-}
-h1, h2, h3, p { 
-	margin: 0; 
-	padding: 0; 
-	font-weight: 200; 
- }
-#top {
+	font-family: Roboto;
+	font-weight: 300;
 	text-align: center;
-	margin: 20px auto;
-	width: 500px;
-	border: 1px solid orange;
-	border-radius: 2px;
-	padding-bottom: 2px;
 }
+
+/*Header*/
 h1 {
+	margin: 20px auto;
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
 	font-size: 50px;
 	letter-spacing: 5px;
+	font-weight: 200;
+	padding-bottom: 9px;
 }
-#bottom {
-	text-align: center;
-	margin-top: 30px;
-}
-#about {
+
+/*Section*/
+section {
 	padding-right: 20%;
 	padding-left: 20%;
 }
 h2 {
+	margin: 20px auto;
 	font-size: 30px;
-}
-#me {
-	width: 75px;
-	border-radius: 3px;
-	margin-top: 25px;
-	margin-bottom: 18px;
-}
-.border {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	padding-bottom: 2px;
+	padding: 4px;
+	font-weight: 200;
+	letter-spacing: 4px;
 }
-#nav {
-	margin-top: 25px;
-	padding-right: 20%;
-	padding-left: 20%;
+img {
+	width: 75px;
+	border: 1px solid black;
+	border-radius: 3px;
 }
 p {
-	font-weight: 300;
+	margin: 20px auto;
 	text-align: left;
+	font-size: 14px;
+	line-height: 20px;
 }
-#grid {
-	margin-top: 20px;
-	overflow: none;
-}
-.block {
+
+/*Article*/
+article {
+	margin-top: 10px;
+	margin-right: 10px;
 	float: left;
 	border: 1px solid black;
 	border-radius: 4px;
-	text-align: center;	
-	padding-top: 5px;
-	padding-bottom: 11px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 5px;
+	text-align: left;	
+	padding: 8px;
 }
 h3 {
 	font-size: 25px;
-	font-weight: 300;
+	margin-bottom: 6px;
 }
 a {
-	color: black;
+	float: left;
 	text-decoration: none;
-	font-size: 15px;
-	border: 1px solid orange;
-	border-radius: 3px;
-	font-weight: 300;	
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 5px;
-	letter-spacing: 5px;
+	color: black;
+	margin-right: 10px;
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 2px;
+	padding-right: 3px;
 	transition: 0.5s;
-	opacity: 0.8;
 }
 a:hover {
 	color: white;
-	background: orange;	
+	background: black;
 }
-.links {
-	margin-top: 5px;
-	float: left;
-}
+
