@@ -3,54 +3,61 @@
 <html>
 
 <head>
-
+	<link rel="stylesheet" type="text/css" href="./stylesheets/reset.css">
 	<link rel="stylesheet" type="text/css" href="./stylesheets/blog_template.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300' rel='stylesheet' type='text'>
-
 	<title>
-		TITLE
+		Week #2 Technical Blog
 	</title>
-
 </head>
  
 <body>
-	<div class="container">
-		<div id="banner">
-			<h1></h1>
-			<h4>Author</h4>
-		</div>
-	</div>
-	<div class="container">
-		<div id="content">
-			<article id="article-1">
-				<h2>blog title</h2>
-				<p>Lorem ipsum dolor sit amet, mei dicta iudico cu. Ne mel diam simul perfecto, cum ei quas libris accusamus. Ut omnis consul maiestatis vix, stet rationibus expetendis mei at, in veritus docendi epicurei mei. Dicant urbanitas eloquentiam ne duo. Vel ei option fastidii, et probo dicta vix.</p>
-				<section>
-					<h3>bulletpoint #1</h3>
-					<p>Lorem ipsum dolor sit amet, mei dicta iudico cu. Ne mel diam simul perfecto, cum ei quas libris accusamus. Ut omnis consul maiestatis vix, stet rationibus expetendis mei at, in veritus docendi epicurei mei. Dicant urbanitas eloquentiam ne duo. Vel ei option fastidii, et probo dicta vix.</p>
-				</section>
-				<section>
-					<h3>bulletpoint #2</h3>
-					<p>Vim partem doming te. Cu vel commodo imperdiet, stet accommodare per at. Cu deleniti mediocrem sadipscing nam, dicta nulla partiendo his eu. At viris cetero aperiri usu. Eum no justo utroque convenire, eu summo vocent est, ad sit quis assum persecuti.</p>
-				</section>
-				<section>
-					<h3>bulletpoint #3</h3>
-					<p>Vim quot dolorum an. Ius at purto rationibus, ne qui tation inciderint neglegentur, graece suavitate appellantur his eu. Tale dicta munere pro eu. Tamquam elaboraret nam ei, vis ad sapientem tincidunt elaboraret. Id quo probatus appellantur, duo iusto labitur bonorum ad.</p>
-				</section>
-			</article>	
-		</div>	
-		<div id="sidebar">
-			<div id="about">
-				<img src="./images/foto.jpg" id="foto"><br>
-				<h5><a href="#" class="button">ABOUT</a></h5>
-			</div>
-			<div id="nav">
+	<header>
+		<h1>EDA Weekly Blog</h1>
+		<h4>Eugene Lynch</h4>
+	</header>
+	<div class="main">
+		<article>
+			<h2>CSS Positioning</h2>
+				<p>In this blog, I'll go over the CSS's position attribute and its values.</p>
+
+			<h3>Static Positioning</h3>
+				<p>Static is the default positioning for all elements -- declaring "position: static" is the same as declaring nothing at all. It's top/bottom/left/right properties are all set to "auto." Explicitly changing any of these properties does nothing -- they are always set to default. The element will always be positioned with the normal flow of the page.</p>
+
+			<h3>Relative Positioning</h3>
+				<p>Declaring "position: relative" positions the element relative to its normal static position. So, if you were to declare "top: 200px," it would move the element 200px below its default position. It's important to note that a relatively positioned element does not affect the normal flow of the website. The website behaves as if the element were still in its static position. This means that the relatively positioned element can overlap with other elements, and the space it used to occupy is still preserved within the normal flow of the website.</p>
+
+			<h3>Absolute</h3>
+				<p>Declaring "position: absolute" positions the element relative to the nearest parent element with a declared position other than static. By positioning an element absolute, you remove it from the flow of all other elements within its parent element. The other elements behave as if it doesn't exist.<br><br>
+				As a quick example, let's suppose you have an image nested in an article, nested in a div:<br><br>     
+				&emsp; div > article > image.<br><br>
+				Now let's suppose that the image is positioned absolutely, with right and top set to 0, and the div is positioned relatively:<br><br>
+				&emsp; div {position: relative;} > article > image {position: absolute; top: 0; right: 0;}<br><br>
+				This will position the image at the upper-right hand corner of the div. If we now have the article positioned relatively like so:
+				&emsp; div {position: relative;} > article {position: relative;} > image {position: absolute; top: 0; right: 0;}<br><br>
+				Than, the image will be positioned at the upper-right hand corner of the article. Now, let's set the article position to absolute, and set to and bottom to 0 and right and left to 20px.<br><br>
+				&emsp; div {position: relative;} > article {position: absolute; top: 0; bottom: 0; left: 20px; right: 20px;} > image {position: absolute; top: 0; right: 0;}<br><br>
+				Absolute positioning can also be used to define the size of an element. By setting top and bottom to 0, we have stretched the article to encompass the entire length of the div. By setting left and right to 20px, we have stretched the width of the article so that there's 20px of padding between it and the sides of the div. The image, as expected, is placed at the upper right hand corner of the article.</p>
+
+			<h3>Fixed</h3>
+				<p>Declaring an element with "position: fixed" positions the element relative to the document window. It ignores its parent elements, and even ignores the DOM. Scrolling vertically and horizontally do not affect the position of the fixed element -- it's always in the same place.<br><br>
+				For example, let's suppose we have a header with fixed positioning nested within the body of the document. Let's say the header contains a little navigation bar and has your company logo as its background.<br><br>
+				&emsp; body > header {position: fixed; background-image: url('logo.png')} > nav<br><br>
+				Now let's suppose we want one of those little headers that stay at the top of the page, even when scrolling up and down and so on. We would do the following:
+				&emsp; body > header {position: fixed; background-image: url('logo.png'); top: 0; right: 0; left: 0; height: 100px;} > nav {position: absolute; bottom: 0; left: 0;}<br><br>
+				By setting top, right, and left of our header to 0, and setting the height to 100px, we are able to position it at the top of the page, with width spanning the entire page, and height of 100px. This way, when we scroll up and down the site, the header is always fixed in that same position at the top. By setting the position of nav to absolute, and its bottom and left attributes to 0, we keep the navigation bar positioned at the bottom-left corner of the fixed header.</p>		
+		</article>	
+		<aside>
+			<img src="./images/foto.jpg" id="foto"><br>
+			<h5><a href="#" class="button">ABOUT</a></h5>
+			<nav>
 				<ul>
-					<li><a href="#">post #1</a></li><br>
-					<li><a href="#">post #2</a></li><br>	<li><a href="#">post #3</a></li><br>
+					<li><a href="http://euglazer.github.io/blog-posts/week2_technical.html">Wk#2Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week1_cultural.html">Wk#1Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week1_technical.html">Wk#1Technical</a></li>
 				</ul>
-			</div>
-		</div>
+			</nav>
+		</aside>
 	</div>
 </body>
 
