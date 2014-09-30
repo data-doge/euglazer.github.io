@@ -1,55 +1,95 @@
 body {
 	cursor: crosshair;
 	font-family: Roboto;
-	font-weight: 300;
+	font-weight: 100;
 	text-align: center;
-}
-h1 {
+	width: 90%;
+	max-width: 720px;
 	margin: 0 auto;
-	width: 500px;
-	border: 1px solid orange;
-	border-radius: 2px;
-	padding-bottom: 2px;
+}
+/*Header*/
+h1 {
+	margin-top: 20px;
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
 	font-size: 50px;
 	letter-spacing: 5px;
-	font-weight: 200;
+	padding-bottom: 9px;
+}
+/*Section*/
+section {
+	overflow: hidden;
+	margin: 0 auto;
 }
 h2 {
 	font-size: 30px;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
-	padding-bottom: 2px;
-	font-weight: 200;
+	padding: 4px;
+	letter-spacing: 4px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 img {
 	width: 75px;
 	border: 1px solid black;
 	border-radius: 3px;
-}
-section {
-	padding-right: 20%;
-	padding-left: 20%;
+	float: left;
+	margin-right: 10px;
 }
 p {
 	text-align: left;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
 }
-article {
-	width: ;
-	float: left;
-	border: 1px solid black;
-	border-radius: 4px;
-	text-align: center;	
-	padding-top: 5px;
-	padding-bottom: 11px;
-	padding-left: 10px;
-	padding-right: 10px;
+/*Article*/
+a {
+	position: relative; float: left;
+	text-decoration: none; font-weight: 300; text-align: left;
+	color: white; background: rgba(0,0,0,0.4);
+	margin-bottom: 10px; margin-right: 10px; padding: 10px;
+	border: 1px solid black; border-radius: 4px;	
+	transition: 0.5s;
+}
+a:hover {
+	background: rgba(0,0,0,0.6);
 }
 h3 {
 	font-size: 25px;
-	font-weight: 300;
+	letter-spacing: 2px;
+	line-height: 30px;
 }
 h4 {
-	font-size: 16px;
-	font-weight: 300;
-	text-align: left;
+	font-size: 14px;
+	color: white;
+	line-height: 20px;
+	letter-spacing: 2px;
+}
+
+/*Projects*/
+div {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-size: cover;
+	border-radius: 4px;
+	z-index: -1;
+}
+#hope {
+	background-image: url('../images/hope.png');
+}
+#haptix {
+	background-image: url('../images/haptix.jpg');
+}
+#harp2 {
+	background-image: url('../images/harp++.png');
+}
+#harp {
+	background-image: url('../images/harp.png');
+}
+#pisces {
+	background-image: url('../images/pisces.png');
+}
+#chemlap {
+	background-image: url('../images/chemlap.png');
 }
