@@ -7,6 +7,7 @@ body {
 	max-width: 720px;
 	margin: 0 auto;
 }
+
 /*Header*/
 h1 {
 	margin-top: 20px;
@@ -39,32 +40,41 @@ img {
 }
 p {
 	text-align: left;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 20px;
 	font-weight: 300;
 }
+.link {
+	border-bottom: 1px solid orange;
+	transition: 0.5s;
+}
+.link:hover {
+	border-bottom-color: rgba(0,0,0,0);
+}
+
 /*Article*/
-a {
+.project {
 	position: relative; float: left;
-	text-decoration: none; font-weight: 300; text-align: left;
-	color: white; background: rgba(0,0,0,0.4);
+	font-weight: 300; text-align: left;
+	color: white; background: rgba(0,0,0,0.5);
 	margin-bottom: 10px; margin-right: 10px; padding: 10px;
 	border: 1px solid black; border-radius: 4px;	
 	transition: 0.5s;
 }
-a:hover {
-	background: rgba(0,0,0,0.6);
+.project:hover {
+	background: rgba(0,0,0,0);
+	color: rgba(0,0,0,0);
 }
 h3 {
-	font-size: 25px;
+	font-size: 22px;
 	letter-spacing: 2px;
 	line-height: 30px;
 }
 h4 {
 	font-size: 14px;
-	color: white;
 	line-height: 20px;
 	letter-spacing: 2px;
+	margin-top: 8px;
 }
 
 /*Projects*/
