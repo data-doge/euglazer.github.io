@@ -12,6 +12,7 @@ article {
 }
 h1 {
 	margin-top: 20px;
+	margin-bottom: 20px;
 	font-size: 50px;
 	letter-spacing: 5px;
 	text-align: center;
@@ -28,7 +29,8 @@ h2 {
 h3 {
 	font-size: 18px;
 	letter-spacing: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
 	padding: 3px 0;
@@ -41,11 +43,12 @@ h4 {
 }
 iframe {
 	display: block;
-	margin: 20px auto;
+	margin: 10px auto;
 }
 img {
 	display: block;
 	width: 350px;
+	border: 1px solid black;
 	border-radius: 3px;
 	margin: 10px auto;
 }
@@ -61,6 +64,7 @@ img {
 p {
 	font-size: 12px;
 	line-height: 18px;
+	margin-bottom: 10px;
 }
 a {
 	border-bottom: 1px solid orange;
