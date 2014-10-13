@@ -100,8 +100,7 @@ a {
 	transition: 0.5s;
 }
 a:hover {
-	color: orange;
-	border-bottom-color: black;
+	border-bottom-color: rgba(0,0,0,0);
 }
 
 /*MEDIA QUERIES*/
