@@ -1,10 +1,10 @@
 body { 
-	font-family: 'Roboto';
+	font-family: 'Roboto', Arial;
 	cursor: crosshair;
 	font-weight: 300;
 	text-align: left;
 	max-width: 720px;
-	margin: 0 auto;
+	margin: 20px auto;
 	width: 90%;
 }
 article {
@@ -18,16 +18,7 @@ h1 {
 	text-align: center;
 }
 h2 {
-	font-size: 30px;
-	margin: 20px auto;
-	border-top: 1px solid orange;
-	border-bottom: 1px solid orange;
-	padding-bottom: 2px;
-	width: 100%;
-	text-align: center;
-}
-h3 {
-	font-size: 18px;
+	font-size: 25px;
 	letter-spacing: 5px;
 	margin-bottom: 10px;
 	margin-top: 10px;
@@ -36,18 +27,13 @@ h3 {
 	padding: 3px 0;
 	text-align: center;
 }
-h4 {
-	font-size: 12px;
-	margin-bottom: 4px;
-	text-align: center;
-}
 iframe {
 	display: block;
 	margin: 10px auto;
 }
 img {
 	display: block;
-	width: 350px;
+	width: 100%;
 	border: 1px solid black;
 	border-radius: 3px;
 	margin: 10px auto;
@@ -61,6 +47,11 @@ img {
 .large {
 	width: 90%;
 }
+figcaption {
+	text-align: center;
+	font-weight: bold;
+	line-height: 18px;
+}
 p {
 	font-size: 12px;
 	line-height: 18px;
@@ -72,4 +63,12 @@ a {
 }
 a:hover {
 	border-bottom-color: rgba(0,0,0,0);
+}
+footer {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 2px 0;
+	text-align: center;
+	letter-spacing: 10px;
+	font-size: 10px
 }
