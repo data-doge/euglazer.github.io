@@ -3,84 +3,123 @@
 <html>
 
 <head>
-	<title>Chemical Laptop</title>
-	<link rel="stylesheet" type="text/css" href="./stylesheets/reset.css">
-	<link rel="stylesheet" type="text/css" href="./stylesheets/projects.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text'>
+  <title>Chemical Laptop</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/reset.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/projects.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text'>
 </head>
 
 <body>
-	<h1>Chemical Laptop</h1>
-	<h3>Meta</h3>
-		 <h4><a href="http://microdevices.jpl.nasa.gov/capabilities/in-situ-instruments/microfluidics.php">Advanced Microfabrication + Optoelectronics Group</a></h4>
-		 <h4><a href="http://www.jpl.nasa.gov/">NASA - Jet Propulsion Laboratory</a></h4>
-		 <h4>Summer 2013</h4>
-		 <h4>Production Period: 12 weeks</h4>
 
-		<article>
-			<h3>Background</h3>
-			<p>The Chemical Laptop, co-engineered with Los Gatos Research, is the first portable, reprogammable, battery-operated, microchip capillary electrophoresis(&microCE) system. Using microfluidic technology and miniaturized components, it allows for high-precision chemical analyses on microliter samples. The instrument is lightweight and battery-powered, so these analyses can be performed on site, in the field. In short, the instrument operates as follows:<br><br>
-			1. A liquid sample is introduced to the instrument and processed with a series of buffers, pH indicators, acids, bases, standards, and fluorescent labeling dyes. These reagents allow for on-chip sample derivatization, mixing, dilution, and pH adjustment.<br>
-			2. The processed sample is then exported to a high voltage, electrophoretic micro-channel where it is separated into components differing in mass and charge.<br>
-			3. As these components migrate down the channel, dye-labeled constituents are excited by a laser and detected by a UV-vis spectrometer. Excitation and fluorescence emission are filtered by a series of bandpass and dichroic filters.<br>
-			4. Lastly, detection signal is visualized and processed with LabVIEW software on a tablet computer mounted atop the instrument.<br>
+  <h1>Chemical Laptop</h1>
 
-			<img class="small" src="./images/chemlap_dim.png">
-			<img class="small" src="./images/chemlap_open.png">
-			<img class="small" src="./images/chemlap.png">
+    <article>
+      <h2>Project Overview</h2>
+      <p>>> The Chemical Laptop, co-engineered with Los Gatos Research, is the first portable, reprogammable, battery-operated, microchip capillary electrophoresis(&microCE) system. Using microfluidic technology and miniaturized components, it allows for high-precision chemical analyses on microliter samples. The instrument is lightweight and battery-powered, so these analyses can be performed on site, or in the field. In short, the instrument operates as follows:<br>
+      1. A liquid sample is introduced to the instrument and processed with a series of buffers, pH indicators, acids, bases, standards, and fluorescent labeling dyes. These reagents allow for on-chip sample derivatization, mixing, dilution, and pH adjustment.<br>
+      2. The processed sample is then exported to a high voltage, electrophoretic micro-channel where it is separated into components differing in mass and charge.<br>
+      3. As these components migrate down the channel, dye-labeled constituents are excited by a laser and detected by a UV-vis spectrometer. Excitation and fluorescence emission are filtered by a series of bandpass and dichroic filters.<br>
+      4. Lastly, detection signal is visualized and processed with LabVIEW software on a tablet computer mounted atop the instrument.<br>
+      >> The first prototype was completed in May 2013, about a week before my arrival. The objective of my work that summer was to test and characterize the newly developed prototype, and prepare the instrument for a completely automated, end-to-end field analysis. This required several modifications to its existing hardware and software, and the development of new hardware and software.</p>
+      <figure class="small">
+        <img src="./chemlap/chemlap_dim.png">
+        <figcaption>Fully assembled Chemical Laptop, with mounting clamp for microfluidic chip, stand for tablet PC, and holder for high voltage electrodes.</figcaption>
+      </figure>
+      <figure class="small">
+        <img  src="./chemlap/chemlap_open.png">
+        <figcaption>Inside of the instrument -- optics, high voltage power supplies, arduino mega 2560 microcontroller, micropumps, and driver circuitry for solenoid valves.</figcaption>
+      </figure>
+      <figure class="small" >
+        <img src="./chemlap/chemlap.png">
+        <figcaption>Instrument packed nicely in a pelican case, with a cover plate for the microfluidic chip.</figcaption>
+      </figure>
+    </article>
 
-			The first prototype was completed in May 2013, about a week before my arrival. The objective of my work that summer was to test and characterize the newly developed prototype, and prepare the instrument for a completely automated, end-to-end field analysis. This required several modifications to its existing hardware and software, and the development of new hardware and software.</p>
-		</article>
+    <article>
+      <h2>Meta</h2>
+      <p>
+        >> <a href="http://microdevices.jpl.nasa.gov/capabilities/in-situ-instruments/microfluidics.php" target="_blank">Advanced Microfabrication + Optoelectronics Group</a>, <a href="http://www.jpl.nasa.gov/" target="_blank">NASA - Jet Propulsion Laboratory</a><br>
+        >> Production Period: 12 weeks, Summer 2013<br>
+        >> My Responsibilities: [1] Revised existing software to reduce complexity of spectral data and optimize automated sample processing cycles. [2] Developed software allowing for automated, on-chip colorimetric determination and adjustment of sample pH. [3] Explored a variety of fabrication methods, materials, and post-fabrication procedures to develop a lightweight, air-tight, pneumatic manifold resistant to deformation under high pressure. [4] Designed a simple mounting system and installed a USB microscope for automated colorimetric pH control and remote observation. [5] Began prototyping miniature, modular, refillable, cartridges for easily storing and dispensing sets of reagents to the instrument.<br>
+        >> Mentors: <a href="http://instrument.jpl.nasa.gov/people/Willis/" target="_blank">Peter Willis</a>, <a href="http://www.astockto.com/" target="_blank">Amanda Stockton</a><br>
+        >> Here is my <a href="./chemlap/final_report.pdf" target="_blank">final report</a> for the project.
+      </p>
+    </article>
 
-		<article>
-		<h3>Partners</h3>
-			<p><a href="http://instrument.jpl.nasa.gov/people/Willis/">Peter Willis</a>, <a href="http://www.astockto.com/">Amanda Stockton</a>, <a href="http://scienceandtechnology.jpl.nasa.gov/people/m_mora/">Maria Mora</a>, <a href="http://scienceandtechnology.jpl.nasa.gov/people/m_cable/">Morgan Cable</a>, <a href="http://www.lgrinc.com/">Los Gatos Research</a></p>
-		</article>
+    <article>
 
-		<article>
-			<h3>What I Did</h3>
-			<p>
-				1. Revised software to reduce complexity of spectral data and optimize automated sample processing cycles.<br> 
-				2. Software development allowing for automated, on-chip colorimetric determination and adjustment of sample pH.<br>	
-				3. Explored a variety of fabrication methods, materials, and post-fabrication procedures to develop a lightweight, air-tight, pneumatic manifold resistant to deformation under high pressure.<br>
-			 	4. Designed a simple mounting system and installed a USB microscope for automated colorimetric pH control and remote observation.<br>
-			 	5. Prototyped miniature, modular, refillable cartridges for easily storing and dispensing sets of reagents to the instrument.<br>
-			</p>
-		</article>
+      <h2>Project Details</h2>
 
-	<h2>Software Revisions</h2>
-		<h3>Simplification of Spectral Data</h3>
-			<p>The Chemical Laptop arrived at our lab with software developed by Los Gatos Research allowing for real-time observation of the spectrometer's measured signal across its entire wavelength range. Since the program recorded signal for 3648 wavelengths every 50ms, its output files quickly became very large. For example, the output data for a 15s measurement was a 3648 x 300 array with a file size of 5.7MB. Along with unnecessary memory costs, the size of these files made data analysis and file transfer inconvenient.<br><br>
-			I developed two solutions to this problem. First, I modified the existing software so that the output data could be truncated to a user-specified wavelength range. Second, I modified the software to allow for real-time observation of the integrated signal over the user-specified wavelength range.</p>
-			<img class="large" src="./images/observation.png">
-			<p>The revised observation interface is shown above. On the lower right are two controls which allow the user to select a wavelength range for analysis. The plot on the left displays emission vs. wavelength within the specified range in real-time. The plot on the right displays the integrated emission signal within the specifed wavelength range as a function of time. Below, there is a drop down menu which allows the user to save the data from either/both of the plots.</p>
-		<h3>Optimization of Existing Labeling Protocols</h3>
-			<p>Since our microfluidic chips are manually assembled, each chip differs in certain qualities like fluidic resistance. Whenever a new chip is assembled, the optimum wait time between valve actuations must be characterized. At long waiting times between valve actuations, the valves open and close completely, and therefore shorter waiting times results in faster fluidic transfer. At short waiting times, the membrane has inadequate time to fully deflect, and therefore does not open or close completely, leading in a reduction in the amount of fluid transferred per pumping iteration and thus slower fluidic transfer. Therefore, a careful optimization was required to determine the optimal waiting time to balance these contradictory effects.</p>
-			<img class="large" src="./images/delay_time.png">
-			<p>Shown above on the left is a typical labeling protocol. On the right is a plot of volume recovery vs. wait time for each of the processes in the labeling protocol. The highest volume recovered from storage reservoirs after analysis was noted at 400ms; however, these values show a certain amount of inconsistency. With a wait time of 500ms, similar volumes (albeit slightly lower) were recorded with a much greater consistency across reservoirs and trial runs. For these reasons, a waiting time of 500ms was used for future labeling protocols.</p>
-			<iframe width="420" height="315" src="http://www.youtube.com/embed/rMYGfABJ1lQ" frameborder="0" allowfullscreen></iframe>
-			<p>Here is a video of the labeling protocol, with food coloring used to represent samples/reagents. You will see each of the steps outlined in the previous figure. In between each step is a rinse cycle to clear leftover reagents in the processing chip before the next step.</p>
-			
-	<h2>Software Development</h2>
-		<h3>Optimized Rinse Cycles</h3>
-			<img class="large" src="./images/rinse1.png">
-			<img class="large" src="./images/rinse2.png">
-			<iframe width="420" height="315" src="http://www.youtube.com/embed/Mx8OME-zWCk" frameborder="0" allowfullscreen></iframe>
-		<h3>Automated, Colorimetric pH Determination</h3>
-			<img class="large" src="./images/phoutline.png">
-			<img class="large" src="./images/ph_face.png">
-			<img class="medium" src="./images/pH_data.png">
-	<h2>Hardware Revisions</h2>	
-		<h3>Pneumatic Manifold</h3>
-			<img class="medium" src="./images/manifold.png">
-			<img class="medium" src="./images/manifold_fridge.png">
-			<img class="large" src="./images/manifold3.png">
-		<h3>Manifold Clamp</h3>
-			<img class="large" src="./images/clamp3.png">
-	<h2>Hardware Development</h2>
-		<h3>Exchangeable Reagent Cartridges</h3>
-			<img class="large" src="./images/cartridge1.png">
-			<img class="large" src="./images/cartridge2.png">
+      <figure class="large" >
+        <img src="./chemlap/observation.png">
+        <figcaption>>> The Chemical Laptop arrived at our lab with software developed by Los Gatos Research allowing for real-time observation of the spectrometer's measured signal across its entire range of detection. This meant that the signal at 3648 discrete wavelengths were being recorded every 50ms. As you can imagine, output files were enormous with memory costs of 24MB / min.<br>
+        >> My redesigned interface, shown above, allows the user to truncate raw data from the spectrometer to a desired wavelength range. It also allows the user to record only the integrated signal vs time within that wavelength range. This significantly reduced memory costs, and made data analysis quite a bit easier.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./chemlap/delay_time.png">
+        <figcaption>>> Since our microfluidic chips are manually assembled, each chip differs in certain qualities, like fluidic resistance. Whenever a new chip is assembled, the optimum wait time between valve actuations must be characterized. Long wait times result in greater fluid transfer, but longer processing time. Conversely, short wait times result in less fluid transfer, but faster processing time. Therefore, a careful optimization was required to balance these contradictory effects.<br>
+        >> A typical labeling protocol is shown on the left. To the right is a plot of volume recovery vs. wait time for each of its processes. At wait times of 500ms, sufficient volume transfers were recorded with great consistency across reservoirs and trial runs. For these reasons, a wait time of 500ms was used for future labeling protocols.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <iframe width="420" height="315" src="http://www.youtube.com/embed/rMYGfABJ1lQ" frameborder="0" allowfullscreen></iframe>
+        <figcaption>>> Here's a video of the amino acid labeling protocol, with food coloring used to represent samples/reagents. You will see each of the steps outlined in the previous figure. In between each step is a rinse cycle to clear leftover reagents in the processing chip before the next step.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./chemlap/rinse1.png" class="medium">
+        <figcaption>>> Between each labeling step, a rinse step is required to wash away residual chemicals. I spent quite some time designing and testing rinse cycles to determine one which required the least power, volume, and time. My results are shown in the above bubble plot. Four candidates were chosen from this bunch and examined in greater detail.</figcaption>
+      </figure>
+
+      <figure class="large">
+      <iframe width="420" height="315" src="http://www.youtube.com/embed/Mx8OME-zWCk" frameborder="0" allowfullscreen></iframe>
+        <figcaption>>> Here's a video of the rinse cycle I eventually chose. It was a combination of the two best rinse cycles from my initial experiments. Beautiful video.</figcaption>
+      </figure>
+
+      <figure class="large">
+      <img src="./chemlap/phoutline.png">
+        <figcaption>>> Since our labeling reactions were pH dependent, and since typical pH electrodes were too large, expensive, and high-maintenance for our needs, I spent a fair amount of time developing an automated method for colorimetrically determining and adjusting the pH of sample solutions containing pH indicators during processing, using a USB microscope which had initially been installed on the instrument for remote observation. After several experiments, I developed the process outlined above.</figcaption>
+      </figure>
+
+      <figure class="large">
+      <img src="./chemlap/ph_interface.jpg">
+        <figcaption>>> This is my LabVIEW interface for the colorimetric pH determination software. It takes real-time video data from the USB microscope and calculates the average RGB values of a cropped region of interest. These RGB values can then be used to estimate the pH of an indicator-containing solution.<br>
+        >> The program is designed to add acid or base to the sample solution until the RGB values reach an experimentally determined threshold indicative of the proper pH range for reaction.</figcaption>
+      </figure>
+
+      <figure class="large">
+      <img class="large" src="./chemlap/ph_USB.png">
+        <figcaption>>> Here's a picture of a simple mounting system I designed to properly position the USB microscope for these colorimetric pH adjustment processes.</figcaption>
+      </figure>
+
+
+      <figure class="large">
+        <img src="./chemlap/manifold3.png">
+        <figcaption>>> On the hardware side of things, I spent some time exploring the feasibility of using 3D printed parts to develop a lightweight, air-tight pneumatic manifold for our microfluidic chip to rest atop. The previous manifold shipped with the instrument was also 3D printed, but over time the material started slowly deforming to a point where it wasn't usable.<br>
+        >> After some research, I decided to try re-fabricating the manifold with an Objet 3D printer. These printers produced beautiful, lightweight, air-tight parts with smooth, flat surfaces; however, since the manifold had 32 internal channels, its support material proved impossible to remove.<br>
+        >> Eventually, I ended up designing a three-piece aluminum manifold -- each piece clamped together with laser-cut gaskets in between. Unfortunately, I'd gone back to university before the fabricated parts had been shipped to the lab.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./chemlap/cartridge1.png">
+        <figcaption>>> Lastly, before heading back to university, I'd began prototyping miniature, modular, refillable cartridges for easily storing/dispensing sets of reagents to the instrument. Since each class of compound our instrument was capable of analyzing required a unique set of reagents and pH indicators, and since our instrument was designed for use in field experiments, we needed a set of analyte-specific cartridges which could be easily attached and detached from the instrument.<br>
+        >> Shown above is the first iteration of these cartridges, which relied on a vacuum seal to hold the reagents in place. This didn't work so well, but it did look pretty.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./chemlap/cartridge2.png">
+        <figcaption>>> Here's the second iteration of those cartridges. This one contained an inner piece which fit tightly inside the cartridge. When the piece was turned to the right, it blocked all the channels containing the reagents. When turned to the left, the channels opened, dispensing the reagents to the microfluidic chip below.<br>
+        >> This, too, did not work, but looked very pretty. Unfortunately, solvents with relatively low surface tension ended up leaking through the seal.</figcaption>
+      </figure>
+
+
+    </article>
+
+    <footer>
+      <h3>Eugene Lynch | 2014<h3>
+    </footer>
+
 </body>
 
 </html>
