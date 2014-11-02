@@ -10,6 +10,7 @@ h2 { margin: 20px auto; font-size: 25px; letter-spacing: 8px; text-align: center
 
 /*MEDIA*/
 iframe { display: block; margin: 0 auto; }
+video { display: block; margin: 0 auto; }
 img { margin: 0 auto; display: block; width: 100%; border: 1px solid black; border-radius: 3px;}
 .small { width: 50%; }
 .medium { width: 70%; }
