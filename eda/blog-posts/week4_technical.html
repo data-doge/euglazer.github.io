@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/blog_template.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300' rel='stylesheet' type='text'>
+	<title>
+		Week #4 Technical Blog
+	</title>
+</head>
+ 
+<body>
+	<header>
+		<h1>EDA Weekly Blog</h1>
+		<h4>Eugene Lynch</h4>
+	</header>
+	<div class="main">
+		<article>
+
+			<h2>Ruby Concepts</h2>
+
+			<p>In this post, I'll be going over Ruby's enumerable method "Enumerable#group_by", and discussing the differences between arrays and hashes.</p>
+
+			<h3>Enumerable#group_by</h3>
+
+			<p>Enumerable methods are those that in some way traverse/search/sort through a collection of data, like a hash or an array.<br><br>
+
+			The #group_by method allows you to group elements an array by whatever parameters/conditions you indicate in a block, and returns a hash with keys are the evaluated result of the block, and values are the arrays of elements corresponding to the key. It's syntax looks like: "array.group_by{|obj| block} --> hash". Let's do some examples, to sort of show how the function works.<br><br>
+
+			Suppose we have an array of strings, each representing some sort of food.<br><br>
+
+			food = ['avocado','beer','bread','potato','nutella','pizza']<br><br>
+
+			And suppose we'd like to order these by whatever the first letter in their name is. We could implement the group_by function as follows:<br><br>
+
+			food.group_by { |name| name[0] }<br><br>
+
+			This bit of code will take a look at the first letter in the name of every type of food in that array, and if there are any similarities, it will group them. As we expect the output looks like this:<br><br>
+
+			{"a"=>["avocado"], "b"=>["beer", "bread"], "p"=>["potato", "pizza"], "n"=>["nutella"]}<br><br>
+
+			Now suppose we'd like to order that same array of food by the length of their names. We'd use the following piece of code:<br><br>
+
+			food.group_by { |name| name.length }<br><br>
+
+			which would give us the following output:<br><br>
+
+			{7=>["avocado", "nutella"], 4=>["beer"], 5=>["bread", "pizza"], 6=>["potato"]}<br><br>
+
+			As a last example, let's use the group_by function to sort the food array by foods which are pizza and foods which are not pizza:<br><br>
+
+			food.group_by { |name| name == "pizza" ? "PIZZA" : "NOT PIZZA" }<br><br>
+
+			which gives us the following output:<br><br>
+
+			{"NOT PIZZA"=>["avocado", "beer", "bread", "potato", "nutella"], "PIZZA"=>["pizza"]}<br><br></p>
+
+			<h3>Arrays vs. Hashes</h3>
+
+			<p>Arrays and hashes indexed collections of data. They both store collections of objects, accessible with a key. With arrays, the key is an integer. With hashes, the key can be any sort of object you want. Both have dynamic size -- their size increases and decreases to fit the number of elements it contains.<br><br>
+
+			It's more efficient to access elements from an array; however, using a hash offers a lot more flexibility. You can index elements of hash with whatever you want -- it could be a string, and integer, or even another hash.<br><br>
+
+			When choosing between hashes and arrays, you should default to an array unless there's some significant benefit to indexing whatever collection of data you have with a non-integer key.</p>
+			
+		</article>	
+		<aside>
+			<img src="./images/foto.jpg" id="foto"><br>
+			<h5><a href="#" class="button">ABOUT</a></h5>
+			<nav>
+				<ul>
+					<li><a href="http://euglazer.github.io/blog-posts/week7_cultural.html">Wk#7Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week7_technical.html">Wk#7Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week6_cultural.html">Wk#6Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week6_technical.html">Wk#6Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week5_cultural.html">Wk#5Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week5_technical.html">Wk#5Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week4_cultural.html">Wk#4Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week4_technical.html">Wk#4Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week1_cultural.html">Wk#3Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week3_technical.html">Wk#3Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week2_technical.html">Wk#2Technical</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week1_cultural.html">Wk#1Cultural</a></li>
+					<li><a href="http://euglazer.github.io/blog-posts/week1_technical.html">Wk#1Technical</a></li>
+				</ul>
+			</nav>
+		</aside>
+	</div>
+</body>
+
+</html>

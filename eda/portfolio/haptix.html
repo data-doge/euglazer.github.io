@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Haptix Node</title>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/projects.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text'>
+</head>
+
+<body>
+
+	<h1>Haptix Node</h1>
+
+		<article>
+			<h2>Overview</h2>
+			<p>>> Haptix Node is a hardware platform allowing developers to create inexpensive, miniaturized, wearable haptic feedback devices for augmented reality. With minimal effort and technical knowledge, users can map sensor data to customizable haptic gestures across an array of vibration motors worn on the body, allowing them to translate any measurable qualities of light, sound, force, etc. into touch.<br>
+
+			>> The platform consists of a 10-motor driver shield for the Teensy 3.1 microcontroller, sensor input ports supporting a variety of data protocols, output ports for vibration motors, and a series of external power modules and sensor modules that easily attach/detach from the device. The device is very small with dimensions of about 3" x 1.75" x 1".<br>
+
+			>> The platform abstracts away any concerns regarding power, sensor circuitry, and motor protection circuitry. Nothing needs to be breadboarded. One simply needs to 1) come up with an idea for a closed-loop sensor-actuator system 2) plug the appropriate sensor module into whichever port matches its protocol, 3) plug in the vibration motors, 4) plug in the appropriate external power module, and 5) upload code to the Teensy.</p>
+		</article>
+
+		<article>
+			<h2>Meta</h2>
+			<p>
+				>> <a href="http://www.tencentsummer.com/" target="_blank">Tencent Innovation Program</a>, Palo Alto, CA, Summer 2014<br>
+			  >> Production Period: 10 weeks<br>
+			  >> My Responsibilities: PCB design, fabrication, assembly, + testing // housing design + assembly // embedded programming + application development<br>
+			  >> Team Members: <a href="http://tomasvega.com/" target="_blank">Tomas Vega</a> (embedded programming + application development)
+			</p>
+		</article>
+
+		<article>
+			<h2>Project Details</h2>
+				<figure>
+					<img src="./haptix/images/main_board_side_closed_3.JPG">
+					<figcaption>>> Completed product. 3D-printed casing [ top: <a href='haptix/files/casingtop.ipt' target='_blank' download>.ipt</a> <a href='haptix/files/casingtop.stl' target='_blank' download>.stl</a> ; bottom: <a href='haptix/files/casingbottom.ipt' target='_blank' download>.ipt</a> <a href='haptix/files/casingbottom.stl' target='_blank' download>.stl</a> ] Connectors for up to 10 vibration motors. Each channel can handle up to 12 V and 3.5 A.</figcaption>
+				</figure>
+				<figure>
+				<img src="./haptix/images/main_board_side_closed_2.JPG">
+					<figcaption>>> Additional view showing bluetooth/serial port (right) and external power port (left)</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/main_board_side_closed_1.JPG">
+					<figcaption>>> Additional view showing analog (left) + I2C sensor (right) ports</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/assembly_closed_side.JPG">
+					<figcaption>>> Assembly: 7 vibration motors connected via ribbon cable (front), LiPo battery connected via external power module (left), audio spectrum analyzer + audio cable + headphones (right), and IR range sensor module with medium-range analog IR sensor + short-range digital IR sensor (back).</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/assembly_open.JPG">
+					<figcaption>>> Same assembly as above, with cover off. Here you can see the Teensy MCU mounted atop the main PCB. The casing also contains cylindrical magnets, so that the top can easily attach/detach to the bottom. When the two attach, there is a very satisfying "CLACK" sound.</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/mainboard.png">
+					<figcaption>>> Main PCB: fully assembled (left), eagle design [ <a href='haptix/files/motor_driver.sch' target='_blank' download>.sch</a> <a href='./haptix/files/motor_driver.brd' target='_blank' download>.brd</a> <a href="./haptix/files/mainboardBOM.xlsx" target='blank' download>BOM</a> ] (right). Contains a 10 channel discrete motor driver circuit. Each channel can handle up to 3.5 A and 12 V. Breakout pins and connectors for sensors, actuators, external power, and serial i/o. SMD components soldered by hand.</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/motor_driver_pinout_full.png">
+					<figcaption>>> Full pinout for the board. As can be seen, the board supports sensors using a whole span of protocols/formats, including I2C, SPI, serial, and standard analog/digital i/o. The external power port, when paired with the appropriate power module, supplies 5V and 3V3 to the sensors, and the initial source voltage to the motors. </figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/HVpower.png">
+					<figcaption>>> Completed "high voltage" power module (left) and eagle design [ <a href='haptix/files/hv_power.sch' target='_blank' download>.sch</a> <a href='./haptix/files/hv_power.brd' target='_blank' download>.brd</a> <a href="./haptix/files/hvBOM.xlsx" target='blank' download>BOM</a> ] (right) . Contains barrel jack, JST connector, and screw terminal for an external power supply ranging between 6-12 V. When plugged into the main board, it routes 5V and 3V3 to the sensors, and the source voltage to the motors.</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/lvpower.png">
+					<figcaption>>> Completed "low voltage" power module (left) and eagle design [ <a href='haptix/files/lv_power.sch' target='_blank' download>.sch</a> <a href='./haptix/files/lv_power.brd' target='_blank' download>.brd</a> <a href="./haptix/files/lvBOM.xlsx" target='blank' download>BOM</a> ] (right) . Contains barrel jack, JST connector, and screw terminal for an external power supply ranging between 3.7 - 5.5 V. When plugged into the main board, it routes 3V3 to the sensors, and the source voltage to the motors.</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/spectrum.png">
+					<figcaption>>> Completed audio spectrum analyzer module (left) and eagle design [ <a href='haptix/files/spectrum_analyzer.sch' target='_blank' download>.sch</a> <a href='./haptix/files/spectrum_analyzer.brd' target='_blank' download>.brd</a> <a href="./haptix/files/spectrumBOM.xlsx" target='blank' download>BOM</a> ] (right). Two stereo audio jacks -- one for input, one for output. Input audio signal passes through the <a href="https://www.sparkfun.com/datasheets/Components/General/MSGEQ7.pdf" target="_blank">MSGEQ7</a> chip which returns a 10-bit analog value for the amplitude at 7 discrete frequency bands ranging between 63 Hz and 16 kHz.</figcaption>
+				</figure>
+				<figure>
+					<img src="./haptix/images/IR.png">
+					<figcaption>>> Completed IR range sensor module (top left), IR sensor and wearable casing (bottom left, designed by <a href="http://tomasvega.com/" target="_blank">Tomas Vega</a>) and eagle design [ <a href='haptix/files/tripleir.sch' target='_blank' download>.sch</a> <a href='./haptix/files/tripleir.brd' target='_blank' download>.brd</a> <a href="./haptix/files/irBOM.xlsx" target='blank' download>BOM</a> ] (right). Breakout pins for up to three range sensors with decoupling capacitors across each one, including the voltage source.</figcaption>
+				</figure>
+			<h2>Applications</h2>
+				<p>>> So far I've used Haptix Node to <a href="../spectrum.html">map the spectral composition of audio signals into tactile sensations along the spine</a>.<br>
+					>> My partner, <a href="http://tomasvega.com/" target="_blank">Tomas Vega</a>, has developed some applications for it as well. So far, he's used Haptix Node to <a href="../distance.html">feel distance using multiple infrared range sensors and an array of vibration motors worn on the arm</a>. In his spare time, he is also using the platform to convert text into recognizable haptic gestures on 6 vibration motors worn on the wrist -- a language he calls "Haptic Braille".<br>
+					>> A copy of Haptix Node is now in the hands of Zach Alterman, a maker/musician living in LA.
+		</article>
+
+		<footer>
+			<h3>Eugene Lynch [2014]</h3>
+		</footer>
+
+</body>
+
+</html>

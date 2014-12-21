@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>PISCES</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/reset.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/projects.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text'>
+</head>
+
+<body>
+
+  <h1>PISCES</h1>
+
+    <article>
+      <h2>Project Overview</h2>
+      <p>>> The Planetary <em>In-Situ</em> Capillary Electrophoresis System (PISCES) is a portable, miniature, modular instrument designed to analyze molecular signatures of extraterrestrial life. The instrument uses microcapillary electrophoresis (&microCE) with laser-induced fluorescence detection (LIFD) to analyze fluorescently-labeled analytes prepared on a multilayer microfluidic chip.<br>
+      >> PISCES is divided into three main systems:<br>
+      [1] The pneumatic system is the processing core of PISCES. It contains 48 electrofluidic solenoid valves which open and close together in various sequences to induce movement of fluids through an array of interconnecting channels on one layer of the microfluidic chip. On this layer of the chip, introduced samples are processed with a set of stored reagents before separation by &microCE.<br>
+      [2] The &microCE system is the analytical core of PISCES. It contains an electrophoretic channel integrated into a separate layer of the microfluidic chip. By generating a strong electric field across the fluidic medium in the channel, separation of a chemical mixture into components of differing mass and charge is achieved.<br>
+      [3] The LIFD system is the detection core of PISCES. It uses an optical pathway and spectrometer to detect laser induced fluorescence of labeled analytes passing through the electrophoretic channel.<br>
+      
+      <figure class="large">
+        <img src="./pisces/pisces.png">
+        <figcaption>>> Solidworks rendering of PISCES, showing four of the five modules.</figcaption>
+      </figure>
+      <p>>> Before my arrival, it was clear what PISCES needed to do, what parts it needed, what qualifying experiments needed to be performed, etc., but it had not yet been designed.<br>
+        >> That summer, it was my job to begin designing and building the instrument. I made a fair amount of progress in the ten weeks I was there, but had to go back to university before completing the instrument. I learned a shitton while working on this project. It was my first introduction to Solidworks, LabVIEW, AutoCAD, Arduino, microfluidics, rapid prototyping, circuit design, and optics. It was very fun, and I've been hardware hacking ever since.</p>
+    </article>
+
+    <article>
+      <h2>Meta</h2>
+      <p>
+        >> <a href="http://microdevices.jpl.nasa.gov/capabilities/in-situ-instruments/microfluidics.php" target="_blank">Advanced Microfabrication + Optoelectronics Group</a>, <a href="http://www.jpl.nasa.gov/" target="_blank">NASA - Jet Propulsion Laboratory</a><br>
+        >> Production Period: 10 weeks, Summer 2012<br>
+        >> My Responsibilities: Hardware design and assembly. Circuit revision. Software prototyping.<br>
+        >> Mentors: <a href="http://instrument.jpl.nasa.gov/people/Willis/" target="_blank">Peter Willis</a>, <a href="http://www.astockto.com/" target="_blank">Amanda Stockton</a><br>
+        >> Here is my <a href="./pisces/pisces.pdf" target="_blank">final report</a> for the project.
+      </p>
+    </article>
+
+
+    <article>
+
+      <h2>Project Details</h2>
+
+      <p>>> PISCES is divided into five modules, each of which can be easily detached from the system for subsystem testing in extreme environments mimicking the desired planetary target.<br>
+      >> The pneumatic module contains the pneumatics and control circuitry required to operate the 48 electrofludiic solenoid valves responsible for on chip sample processing. This includes two micropumps (air and vacuum), pumping manifolds (to interface the micropumps with the solenoid valves), a printed circuit board (to interface the control circuitry with the solenoid valves), an Arduino microcontroller (to switch the solenoid valves between states), and an h-bridge solenoid driver board (to convert the Arduino's unipolar digital output to the bipolar voltage input that the solenoids require).</p>
+ 
+      <figure class="large">
+        <img src="./pisces/pneumatics1.png">
+        <figcaption>>> Initial solidworks design with parts labeled and control flow.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/pneumatics2.png">
+        <figcaption>>> Prototype LabVIEW program built to interface with the Arduino, allowing manual operation of solenoid valves.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/pneumatics3.png">
+        <figcaption>>> Expanded circuit diagram for the solenoid driver board. Includes extra h-bridges to support more solenoids, power supplies for the micropumps, and header pins to interface with the Arduino and the other circuit board.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/pneumatics4.png">
+        <figcaption>>> Assembled circuit board, designed to interface the solenoid array with the solenoid driver board.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/pneumatics5.png">
+        <figcaption>>> ABS CNC milled manifold with barbed fittings, used to interface micropumps with the solenoid arrays.</figcaption>
+      </figure>
+<!--       [3] Optical Electronics Module: contains the spectrometer, laser, and laser power supply necessary for LIFD.<br>
+      [4] Optics Module: contains the optical pathway directing laser light to the chip, and fluorescent light to the spectrometer.<br>
+      [5] Power Supply Module: contains batteries and circuitry required to power the above modules.<br>
+ -->
+      <p>The &micro module contains the circuitry required to apply between 3-15 kV to the microdevice's electrophoretic channel. This includes two 3kV HV power supplies and one 15kV power supply, and circuitry allowing control over and monitoring of the output voltage for each power supply.</p>
+
+      <figure class="large">
+        <img src="./pisces/hv1.png">
+        <figcaption>>> Solidworks rendering, showing where the &micro module would be placed in relation to the pneumatics module and optics modules.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/hv2.png">
+        <figcaption>>> Schematic for another one of our lab's instruments, adapted for PISCES. 3 kV power supplies were switched out for smaller, more efficient ones. The Arduino MEGA was switched out for the smaller, cheaper Arduino UNO. A bipolar to unipolar converter and summing amplifier were added to every junction between the HV power supplies and analog inputs on the arduino, to prevent negative currents to the arduino.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/optics1.png">
+        <figcaption>>> Solidworks rendering of the optics modules, detailing the optical pathway.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/optics2.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/optics3.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/optics4.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/oe1.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/oe2.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/oe3.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+      <figure class="large">
+        <img src="./pisces/power.png">
+        <figcaption>>> Lorem ipsum dolor sit amet, mei dicta iudico cu.</figcaption>
+      </figure>
+
+    </article>
+
+    <footer>
+      <h3>Eugene Lynch [2014]<h3>
+    </footer>
+
+</body>
+
+</html>

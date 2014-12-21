@@ -1,0 +1,92 @@
+body {
+	cursor: crosshair;
+	font-family: Roboto;
+	font-weight: 100;
+	text-align: center;
+	width: 90%;
+	max-width: 720px;
+	margin: 20px auto;
+}
+
+/*Header*/
+h1 {
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
+	font-size: 50px;
+	letter-spacing: 5px;
+	padding-bottom: 9px;
+}
+
+/*About*/
+section {
+	overflow: hidden;
+}
+h2 {
+	font-size: 30px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 4px;
+	letter-spacing: 4px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+img {
+	width: 100px;
+	border: 1px solid black;
+	border-radius: 3px;
+	float: left;
+	margin-right: 10px;
+}
+p {
+	text-align: left;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 300;
+}
+.link {
+	border-bottom: 1px solid orange;
+	transition: 0.5s;
+}
+.link:hover {
+	border-bottom-color: rgba(0,0,0,0);
+}
+
+/*Projects*/
+.project {
+	position: relative; float: left;
+	font-weight: 100; text-align: left;
+	color: white; background: rgba(0,0,0,0.5);
+	margin-bottom: 10px; margin-right: 10px; padding: 10px;
+	border: 1px solid black; border-radius: 4px;
+	transition: 0.5s;
+}
+.project:hover {
+	background: rgba(0,0,0,0);
+	color: rgba(0,0,0,0);
+}
+h3 {
+	font-size: 22px;
+	letter-spacing: 2px;
+	line-height: 30px;
+}
+h4 {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 2px;
+	margin-top: 8px;
+}
+div {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-size: cover;
+	border-radius: 4px;
+	z-index: -1;
+}
+#hope { background-image: url('../images/hope.png'); }
+#haptix { background-image: url('../images/haptix.JPG'); }
+#harp2 { background-image: url('../images/harp++.png'); }
+#harp { background-image: url('../images/harp.png'); }
+#pisces { background-image: url('../images/pisces.png'); }
+#chemlap { background-image: url('../images/chemlap.png'); }
+#audiotactile { background-image: url('../images/audiotactile.png'); }
+#irwhitecane { background-image: url('../images/irwhitecane.png'); }

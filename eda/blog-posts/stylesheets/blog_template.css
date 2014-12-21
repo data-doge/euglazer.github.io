@@ -1,0 +1,123 @@
+body {
+	font-family: 'Roboto';
+	cursor: crosshair;
+	font-weight: 300;
+	width: 90%;
+	margin: 0 auto;
+}
+
+/*HEADER*/
+header {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 100;
+	margin-top: 20px;
+}
+h1 { /*page title*/
+	font-size: 42px;
+	letter-spacing: 8px;
+}
+h4 { /*name*/
+	margin-top: 10px;
+	font-size: 18px;
+	letter-spacing: 5px;
+}
+
+/*MAIN*/
+.main {
+	border: 1px solid black;
+	border-radius: 3px;
+	margin: 20px 0;
+	overflow: auto;
+	padding: 10px;
+}
+
+/*CONTENT*/
+article {
+	width: 85%;
+	float: left;
+}
+h2 { /*blog title*/
+	font-size: 30px;
+	letter-spacing: 5px;
+	font-weight: 300;
+	color: orange;
+}
+h3 { /*blog subtitles*/
+	font-size: 21px;
+	margin-top: 10px;
+}
+p {
+	margin-top: 10px;
+	line-height: 20px;
+	font-size: 13px;
+}
+br {
+   display: block;
+   margin: 5px 0;
+}
+
+/*SIDEBAR*/
+aside {
+	float: right;
+	text-align: center;
+	width: 15%;
+}
+
+/*ABOUT*/
+#foto {
+	max-width: 100px;
+	width: 60%;
+	opacity: 0.5;
+}
+h5 { /*about button*/
+	font-size: 14px;
+	margin-top: 10px;
+}
+.button {
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 0 2px;
+	transition: 0.5s;
+}
+.button:hover {
+	background: black;
+	color: white;
+}
+
+/*NAV*/
+nav {
+}
+li {
+	margin-top: 10px;
+}
+a {
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px solid orange;
+	transition: 0.5s;
+}
+a:hover {
+	border-bottom-color: rgba(0,0,0,0);
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 960px) {
+	article {
+		width: 80%;
+	}
+	aside {
+		width: 20%;
+	}
+}
+
+@media (max-width: 550px) {
+	article {
+		width: 70%;
+	}
+	aside {
+		width: 30%;
+	}
+}
