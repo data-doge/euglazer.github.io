@@ -14,3 +14,10 @@ p {
   text-align: left;
 }
 
+.image-container {
+  background: url('./../images/eugene.png');
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
