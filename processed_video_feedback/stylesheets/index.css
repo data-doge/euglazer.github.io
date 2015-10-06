@@ -24,12 +24,19 @@ h1 {
   letter-spacing: 7px;
 }
 
+h2 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 p {
   text-align: justify;
 }
 
-.project-description:first-line {
-    font-size: 24px;
+.project-description-intro {
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -80,6 +87,10 @@ p {
 
 .image-xiaohan {
   background-image: url('./../images/xiaohan.jpg');
+}
+
+.contact-container {
+  margin-bottom: 10px;
 }
 
 .vertalign {
