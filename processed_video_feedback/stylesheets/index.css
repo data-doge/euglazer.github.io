@@ -1,0 +1,16 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato';
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+
+p {
+  text-align: left;
+}
+
