@@ -10,6 +10,20 @@ body {
   width: 600px;
 }
 
+header {
+  background: url('./../images/feedbackfractal.png');
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+  color: white;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: normal;
+  letter-spacing: 7px;
+}
+
 p {
   text-align: left;
 }
@@ -20,4 +34,10 @@ p {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+
+.vertalign {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
