@@ -33,6 +33,39 @@ p {
     font-weight: 700;
 }
 
+.material-container {
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.material-image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  margin-bottom: 5px;
+}
+
+#raspberry-pi-image {
+  background-image: url('./../images/raspberry_pi.jpg');
+}
+
+#projector-image {
+  background-image: url('./../images/projector.png');
+}
+
+#webcam-image {
+  background-image: url('./../images/webcam.jpg');
+}
+
+#kids-image {
+  background-image: url('./../images/kids.jpg');
+}
+
+.material-label {
+  font-weight: bold;
+}
+
 .image-container {
   background-size: cover;
   width: 150px;
